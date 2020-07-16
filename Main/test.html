@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>시맨틱 태그로 구조화 연습</title>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script>
+        var win=null;
+        function showHTML() {
+            if(win == null || win.closed)
+                win = window.open("", "outWin", "width=250,height=150");
+        
+            var idArea = document.getElementById("Id");
+            var pwArea1 = document.getElementById("Password1");
+            var pwArea2 = document.getElementById("Password2");
+
+            var result = idArea.value + "<br>" + pwArea1.value + "<br>" + pwArea2.value;
+            win.document.open();
+            win.document.write(result);
+            // win.document.write(pwArea1.value + "<br>");
+            // win.document.write(pwArea2.value);
+            win.document.close();
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <h1>김동현</h1>
+        <p>1993년 8월 17일 제주도에서 태어난 김동현(1993년 8월 17일 ~ )을 소개한다.</p>
+        <figure>
+            <img width="200" height="200" src="http://www.audiocamp.net/data/down/1081239428/gallery_0_831_1.jpg">
+            <figcaption>1770년대 초상화</figcaption>
+        </figure>
+    </header>
+    <nav>
+        <h2>목차</h2>
+        <ul>
+            <li><a href="#life">생애</a></li>
+            <li><a href="#death">죽음</a></li>
+            <li><a href="#music">음악</a></li>
+        </ul>
+    </nav>
+    <article id="life">
+        <h2>생애</h2>
+        <p>모차르트는 1756년 1월 27일 잘츠부르크에서 태어나서, 궁정 음악가였던 아버지
+            에게 피아노와 바이올린을 배웠고, 다섯살 때 이미 작곡을 하기 시작했으며, 1764년에서 1765년 사이에 바흐로부터 처음으로 교향곡을 작곡하는 법을 배웠는데 이것이 모차르트가 수많은
+            교향곡을 남기는 계기가 되었다. 모차르트는 빈에서 1784년에 14세인 베토벤을 만나 베토벤을 교육시키는데 전념하기도 했다.
+        </p>
+    </article>
+    <hr>
+    <h3>주소</h3>
+    <label>시/도 </label><input type="text" name="sido" list="sidos">
+    <datalist id="sidos">
+        <option value="제주시">
+        <option value="서귀포시">
+    </datalist>
+    <label>읍/면/동 </label><input type="text" name="dong" list="dongs">
+    <datalist id="dongs">
+        <option value="구좌읍">
+        <option value="한림읍">
+        <option value="이도일동"></option>
+        <option value="이도이동"></option>
+    </datalist>
+    <label>상세주소 </label><input type="text">
+
+    <hr>
+    <table border="1" style="border-collapse: collapse;">
+        <caption>회원가입</caption>
+        <tbody>
+            <tr>
+                <td>ID</td>
+                <td><input type="text" id="Id" value="Id"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="Password1" value="password1"></td>
+            </tr>
+            <tr>
+                <td>Check Password</td>
+                <td><input type="password" id="Password2" value="password2"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="showHTML()">확인</button>
+    <!-- <div id="box">box</div> -->
+    <!-- <div id="ball"></div> -->
+    <hr>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+    </div>
+    <div class="dropup">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+    </button>
+
+    <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+    </button>
+
+    <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> Star
+    </button>
+
+    <!-- Single button -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            Action <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
