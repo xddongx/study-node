@@ -3,3 +3,7 @@ ppt/
 node_modules/
 package-lock.json
 package.json
+db.sqlite3
+*.pyc
+migrations/
+.idea/
