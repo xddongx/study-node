@@ -1,2 +1,5 @@
 memo.txt
 ppt/
+node_modules/
+package-lock.json
+package.json
