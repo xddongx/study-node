@@ -7,3 +7,11 @@ db.sqlite3
 *.pyc
 migrations/
 .idea/
+*.wt
+*.bson
+WiredTiger
+*.lock
+*.turtle
+monogodb/
+journal/
+diagnostic.data
